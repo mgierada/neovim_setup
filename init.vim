@@ -1,4 +1,3 @@
-:set number
 :set relativenumber
 :set autoindent
 :set tabstop=4
@@ -38,7 +37,7 @@ nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme jellybeans
+:colorscheme focuspoint
 
 let g:airline_powerline_fonts = 1
 
