@@ -23,11 +23,13 @@ Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple c
 Plug 'https://github.com/junegunn/fzf.vim' " navigate through Files
 Plug 'https://github.com/junegunn/fzf' " navigate through Files
 Plug 'https://github.com/airblade/vim-gitgutter' " git gutter
-
-set encoding=UTF-8
+Plug 'https://github.com/ThePrimeagen/vim-be-good'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-fugitive'  " git fugative
 
 call plug#end()
 
+set encoding=UTF-8
 " nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -51,6 +53,9 @@ let g:airline_powerline_fonts = 1
 " :CocInstall coc-clangd
 " :CocInstall coc-snippets
 " :CocCommand snippets.edit... FOR EACH FILE TYPE
+" :CocInstall coc-tsserver
+" :CocInstall coc-json
+" :CocInstall coc-eslint
 
 " inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
