@@ -66,4 +66,9 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nnoremap <C-b> :ls<CR>:b<Space>
-nnoremap <C-p> :Files<CR>
+noremap <C-p> :Files<CR>
+
+" Navigate through files in a buffer
+nnoremap <C-]> :bn<CR>
+nnoremap <C-[> :bp<CR>
+
