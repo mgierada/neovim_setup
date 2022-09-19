@@ -68,6 +68,12 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 nnoremap <C-b> :ls<CR>:b<Space>
 noremap <C-p> :Files<CR>
 
+" Remap gd to have a nice go to definition
+nmap gd <Plug>(coc-definition)
+
+inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
+
+
 " Navigate through files in a buffer
 nnoremap <C-]> :bn<CR>
 nnoremap <C-[> :bp<CR>
