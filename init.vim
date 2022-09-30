@@ -27,6 +27,7 @@ Plug 'https://github.com/airblade/vim-gitgutter' " git gutter
 Plug 'https://github.com/ThePrimeagen/vim-be-good'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'  " git fugative
+https://github.com/github/copilot.vim " github copilot
 
 call plug#end()
 
