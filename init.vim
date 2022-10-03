@@ -27,7 +27,9 @@ Plug 'https://github.com/airblade/vim-gitgutter' " git gutter
 Plug 'https://github.com/ThePrimeagen/vim-be-good'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'  " git fugative
-https://github.com/github/copilot.vim " github copilot
+Plug 'https://github.com/github/copilot.vim' " Github Copilot 
+Plug 'kyazdani42/nvim-web-devicons' " Icons for tabline
+Plug 'romgrk/barbar.nvim' " Tabline
 
 call plug#end()
 
