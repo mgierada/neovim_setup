@@ -43,7 +43,7 @@ nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme focuspoint
+:colorscheme orbital
 
 let g:airline_powerline_fonts = 1
 
