@@ -102,6 +102,15 @@ return packer.startup(function(use)
 	-- github copilot
 	use("github/copilot.vim")
 
+	-- git fugative
+	use("tpope/vim-fugitive")
+
+	-- handler for git fugative
+	use("tpope/vim-rhubarb")
+
+	-- vim test
+	use("vim-test/vim-test")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

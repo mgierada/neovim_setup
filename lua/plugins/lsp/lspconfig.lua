@@ -82,29 +82,45 @@ lspconfig["tailwindcss"].setup({
 	on_attach = on_attach,
 })
 
-lspconfig["pyright"].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
+lspconfig["pyright"].setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	-- use black for formatting
+	settings = {
+		python = {
+			formatting = {
+				provider = "black",
+				blackArgs = {
+					"--line-length",
+					"79",
+				},
+			},
+		},
+	},
+})
 
+lspconfig["sqls"].setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+})
 
--- -- configure lua server (with special settings)
--- lspconfig["sumneko_lua"].setup({
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- 	settings = { -- custom settings for lua
--- 		Lua = {
--- 			-- make the language server recognize "vim" global
--- 			diagnostics = {
--- 				globals = { "vim" },
--- 			},
--- 			workspace = {
--- 				-- make language server aware of runtime files
--- 				library = {
--- 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
--- 					[vim.fn.stdpath("config") .. "/lua"] = true,
--- 				},
--- 			},
--- 		},
--- 	},
--- })
+-- configure lua server (with special settings)
+lspconfig["sumneko_lua"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = { -- custom settings for lua
+		Lua = {
+			-- make the language server recognize "vim" global
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				-- make language server aware of runtime files
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+		},
+	},
+})
