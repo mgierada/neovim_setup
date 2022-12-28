@@ -61,3 +61,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- f-person (aka git blame)
+keymap.set("n", "<leader>gbt", ":GitBlameToggle<CR>") -- toggle git blame on current line
