@@ -61,3 +61,15 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- f-person (aka git blame)
+keymap.set("n", "<leader>gbt", ":GitBlameToggle<CR>") -- toggle git blame on current line
+
+-- nvim-dap
+keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>") -- toggle breakpoint
+keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>") -- continue
+keymap.set("n", "<leader>di", ":lua require'dap'.step_into()<CR>") -- step into
+keymap.set("n", "<leader>do", ":lua require'dap'.step_over()<CR>") -- step over
+keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>") -- open repl
+keymap.set("n", "<leader>dl", ":lua require'dap'.run_last()<CR>") -- run last debug session
+keymap.set("n", "<leader>dt", ":lua require'dap-python'.test_method()<CR>") -- open frames view

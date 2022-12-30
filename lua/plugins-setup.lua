@@ -98,7 +98,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-
+	use("f-person/git-blame.nvim") -- show git blame on the right hand side
 	-- github copilot
 	use("github/copilot.vim")
 
@@ -110,6 +110,11 @@ return packer.startup(function(use)
 
 	-- vim test
 	use("vim-test/vim-test")
+
+	-- debugging with vim
+	use("mfussenegger/nvim-dap")
+	use("mfussenegger/nvim-dap-python")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
 	if packer_bootstrap then
 		require("packer").sync()
