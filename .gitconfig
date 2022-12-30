@@ -1,0 +1,12 @@
+[user]
+  name = [user_name]
+  email = [user_email]
+[core]
+  editor = nvim
+[merge]
+	tool = "nvim"
+[mergetool]
+	keepBackup = false
+	prompt = false
+[mergetool "nvim"]
+  cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
