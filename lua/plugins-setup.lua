@@ -116,6 +116,9 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap-python")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
+	-- git diff view
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

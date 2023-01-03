@@ -71,5 +71,12 @@ keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>") -- continue
 keymap.set("n", "<leader>di", ":lua require'dap'.step_into()<CR>") -- step into
 keymap.set("n", "<leader>do", ":lua require'dap'.step_over()<CR>") -- step over
 keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>") -- open repl
-keymap.set("n", "<leader>dl", ":lua require'dap'.run_last()<CR>") -- run last debug session
+keymap.set("n", "<leader>dl", ":lua require'dap'.run_last()<CR>") -- run last debug sessionkj
 keymap.set("n", "<leader>dt", ":lua require'dap-python'.test_method()<CR>") -- open frames view
+
+-- git mergetool
+keymap.set("n", "<leader>gm", ":Gvdiffsplit!<CR>") -- open git mergetool
+keymap.set("n", "<leader>gmc", ":diffget //2<CR>") -- get current change
+keymap.set("n", "<leader>gml", ":diffget LO<CR>") -- accept local change
+keymap.set("n", "<leader>gmr", ":diffget RE<CR>") -- remote change
+keymap.set("n", "<leader>gmb", ":diffget BA<CR>") -- original base
