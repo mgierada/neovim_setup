@@ -119,6 +119,27 @@ return packer.startup(function(use)
 	-- git diff view
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+	-- Bluloco theme
+	use({
+		"uloco/bluloco.nvim",
+		requires = { "rktjmp/lush.nvim" },
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
