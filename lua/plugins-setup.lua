@@ -134,13 +134,27 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+
 	-- Bluloco theme
 	use({
 		"uloco/bluloco.nvim",
 		requires = { "rktjmp/lush.nvim" },
 	})
 
+	-- tokynight theme
+	use("folke/tokyonight.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
 	end
+
+	-- -- coverage
+	-- use({
+	-- 	"andythigpen/nvim-coverage",
+	-- 	requires = "nvim-lua/plenary.nvim",
+	-- 	-- Optional: needed for PHP when using the cobertura parser
+	-- 	rocks = { "lua-xmlreader" },
+	-- 	config = function()
+	-- 		require("coverage").setup()
+	-- 	end,
+	-- })
 end)
